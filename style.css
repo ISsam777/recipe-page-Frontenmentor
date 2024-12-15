@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap");
+
+:root {
+  --st100: hsl(30, 54%, 90%);
+  --st150: hsl(30, 18%, 87%);
+  --st600: hsl(30, 10%, 34%);
+  --st900: hsl(24, 5%, 18%);
+  --Brown: hsl(14, 45%, 36%);
+  --Rose1: hsl(332, 51%, 32%);
+  --Rose2: hsl(330, 100%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", serif;
+  font-style: 16px;
+}
+
+body {
+  background-color: var(--st100);
+}
+
+.content {
+  background-color: var(--white);
+  width: 30em;
+  margin: 40px auto;
+  padding: 75px 50px;
+  border-radius: 20px;
+  line-height: 2.5em;
+}
+
+img {
+  width: 30em;
+  border-radius: 15px;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+
+h2 {
+  color: var(--Brown);
+}
+h3 {
+  color: var(--Rose1);
+}
+
+h4 {
+  display: inline-block;
+}
+hr {
+  color: var(--Rose2);
+}
+.time {
+  background-color: var(--Rose2);
+  padding: 1em 1em;
+  border-radius: 10px;
+}
+
+.Prep {
+  margin-left: 1em;
+}
+
+.ingredients {
+  margin-left: 2em;
+}
+
+.instruction {
+  margin-left: 1em;
+}
+span {
+  color: var(--Brown);
+  font-weight: 600;
+}
+
+ol {
+  list-style: none;
+  counter-reset: num;
+}
+
+ol li {
+  counter-increment: num;
+}
+
+ol li::before {
+  content: counter(num) ". ";
+  color: var(--Brown);
+  font-weight: 600;
+}
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+}
+#n {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    width: 350px;
+    padding: 0;
+    border-radius: 0;
+  }
+  .text {
+    padding: 10px 20px;
+  }
+  img {
+    border-radius: 0;
+    width: 100%;
+  }
+  #n {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
